@@ -29,3 +29,7 @@ function calcular() {
       " pesos";
   }
 }
+//NaN: Is Not a Number
+//if(isNaN(op1));
+
+//console.log("tenes pesos" + resultado);
