@@ -1,3 +1,7 @@
+//Llamo a objeto indicado
+
+import { dolarTurista } from "../index.js";
+
 //registro de usuario
 
 let nombre = prompt("ingresar nombre");
@@ -8,13 +12,13 @@ alert(salida);
 const txtOp1 = document.getElementById("op1");
 const btnCalcular = document.getElementById("calcular");
 const pResultado = document.getElementById("resultado");
-const dolarTurista = 440.5;
+/* const dolarTurista = 440.5; */
 
 btnCalcular.addEventListener("click", calcular);
 
 function calcular() {
   const op1 = parseFloat(txtOp1.value);
-  let resultado = dolarTurista * op1;
+  let resultado = dolarTurista.valor * op1;
 
   if (isNaN(op1)) {
     pResultado.innerText = "Debe insertar números";
@@ -26,6 +30,10 @@ function calcular() {
       " " +
       "en total tenés: $" +
       resultado +
-      " pesos";
+      " pesos" +
+      " " +
+      "almacenados como" +
+      " " +
+      dolarTurista.nombre;
   }
 }

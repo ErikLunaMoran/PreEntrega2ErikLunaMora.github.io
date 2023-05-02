@@ -1,6 +1,6 @@
 //Llamo a objeto indicado
 
-import { dolarTarjeta } from "../index.js";
+import { dolarBolsa } from "../index.js";
 
 //registro de usuario
 
@@ -12,13 +12,12 @@ alert(salida);
 const txtOp1 = document.getElementById("op1");
 const btnCalcular = document.getElementById("calcular");
 const pResultado = document.getElementById("resultado");
-/* const dolarTarjeta = 385.44; */
 
 btnCalcular.addEventListener("click", calcular);
 
 function calcular() {
   const op1 = parseFloat(txtOp1.value);
-  let resultado = dolarTarjeta.valor * op1;
+  let resultado = dolarBolsa.valor * op1;
 
   if (isNaN(op1)) {
     pResultado.innerText = "Debe insertar números";
@@ -34,6 +33,6 @@ function calcular() {
       " " +
       "almacenados como" +
       " " +
-      dolarTarjeta.nombre;
+      dolarBolsa.nombre;
   }
 }

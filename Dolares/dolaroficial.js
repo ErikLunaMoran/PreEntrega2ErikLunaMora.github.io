@@ -1,12 +1,6 @@
-//Resultado
-/* let dolarOficial = 212;
-let dolarTengo = 300;
-let multiplicacionOficial = dolarOficial * dolarTengo;
-console.log("$" + multiplicacionOficial + " tenes guardados en el banco");
+//Llamo a objeto indicado
 
-function multiplicacionOficial() {
-
-} */
+import { dolarOficial } from "../index.js";
 
 //registro de usuario
 let nombre = prompt("ingresar nombre");
@@ -17,13 +11,13 @@ alert(salida);
 const txtOp1 = document.getElementById("op1");
 const btnCalcular = document.getElementById("calcular");
 const pResultado = document.getElementById("resultado");
-const dolarOficial = 220.25;
+/* const dolarOficial = 220.25; */
 
 btnCalcular.addEventListener("click", calcular);
 
 function calcular() {
   const op1 = parseFloat(txtOp1.value);
-  let resultado = dolarOficial * op1;
+  let resultado = dolarOficial.valor * op1;
 
   if (isNaN(op1)) {
     pResultado.innerText = "Debe insertar números";
@@ -35,7 +29,11 @@ function calcular() {
       " " +
       "en total tenés: $" +
       resultado +
-      " pesos";
+      " pesos" +
+      " " +
+      "almacenados como" +
+      " " +
+      dolarOficial.nombre;
   }
 }
 
